@@ -37,10 +37,10 @@ disqus_shortname:   taylantatli
   #ad-client:
   #ad-slot:
 #bing-verify:
-#email:
+email:              849777710@qq.com
 # twitter:            username
 # facebook:           username
-github-url:         https://github.com/
+github-url:         xzping
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
@@ -55,7 +55,7 @@ github-url:         https://github.com/
 #youtube:           username
 #youtube-channel:   channel
 #soundcloud:        username
-weibo:              xzping-
+# weibo:              xzping-
 #flickr:            username
 #codepen:           username
 #keybase:           username
