@@ -72,8 +72,8 @@ gems:
 jekyll-mentions:
     base_url: https://github.com
 
-paginate: 5
-paginate_path: "/page/:num"
+# paginate: 5
+# paginate_path: "/page/:num"
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
