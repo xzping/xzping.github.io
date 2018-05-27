@@ -68,14 +68,10 @@ gems:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-paginate
 
 jekyll-mentions:
     base_url: https://github.com
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jemoji
 
 paginate: 8
 paginate_path: "/page/:num"
