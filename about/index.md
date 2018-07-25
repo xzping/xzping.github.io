@@ -9,6 +9,6 @@ comments: false
 <center>An ordinary programmer.</center>
 
 ## 关于作者
-Java开发工程师、IT应用软件开发工程师
+程序员
 * Email：849777710@qq.com
 * github：https://github.com/xzping/
