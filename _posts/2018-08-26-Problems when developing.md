@@ -18,4 +18,4 @@ Run：
 
 (1)mvn dependency:purge-local-repository
 
-(2)mvn dean verify
+(2)mvn clean verify
