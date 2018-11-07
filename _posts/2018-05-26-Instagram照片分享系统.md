@@ -11,8 +11,8 @@ tag:
 comments: true
 ---
 
-![Instagram Homepage](http://ox6xu9hb7.bkt.clouddn.com/WechatIMG143.jpeg)
-
+![Partition Image]({{site.url}}/assets/img/postimage/ImagePostSystem/WechatIMG143.jpeg)
+{: .image-middle}
 
 <center>Instagram是一个基于Python的照片分享系统。</center>
 
