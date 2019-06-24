@@ -26,7 +26,7 @@ comments: true
 
 那只好做session 的复制了， 把session id 在两个机器之间搬来搬去， 快累死了。
 
-![Partition Image]({{site.url}}/assets/img/postimage/CookieAndSessionAndToken⁩/one.jpeg)
+![Partition Image]({{site.url}}/assets/img/postimage/Web/one.jpeg)
 {: .image-middle}
 
 ![Partition Image]({{site.url}}/assets/img/postimage/GC/serial.jpeg)
@@ -34,7 +34,7 @@ comments: true
 
 后来有个叫Memcached的支了招： 把session id 集中存储到一个地方， 所有的机器都来访问这个地方的数据， 这样一来，就不用复制了， 但是增加了单点失败的可能性， 要是那个负责session 的机器挂了， 所有人都得重新登录一遍， 估计得被人骂死。
 
-![Partition Image]({{site.url}}/assets/img/postimage/CookieAndSessionAndToken⁩/two.jpeg)
+![Partition Image]({{site.url}}/assets/img/postimage/Web/two.jpeg)
 {: .image-middle}
 
 也尝试把这个单点的机器也搞出集群，增加可靠性， 但不管如何， 这小小的session 对我来说是一个沉重的负担
@@ -51,12 +51,12 @@ comments: true
 
 那就对数据做一个签名吧， 比如说我用HMAC-SHA256 算法，加上一个只有我才知道的密钥， 对数据做一个签名， 把这个签名和数据一起作为token ， 由于密钥别人不知道， 就无法伪造token了。
 
-![Partition Image]({{site.url}}/assets/img/postimage/CookieAndSessionAndToken⁩/three.jpeg)
+![Partition Image]({{site.url}}/assets/img/postimage/Web/three.jpeg)
 {: .image-middle}
 
 这个token 我不保存， 当小F把这个token 给我发过来的时候，我再用同样的HMAC-SHA256 算法和同样的密钥，对数据再计算一次签名， 和token 中的签名做个比较， 如果相同， 我就知道小F已经登录过了，并且可以直接取到小F的user id , 如果不相同， 数据部分肯定被人篡改过， 我就告诉发送者： 对不起，没有认证。
 
-![Partition Image]({{site.url}}/assets/img/postimage/CookieAndSessionAndToken⁩/four.jpeg)
+![Partition Image]({{site.url}}/assets/img/postimage/Web/four.jpeg)
 {: .image-middle}
 
 Token 中的数据是明文保存的（虽然我会用Base64做下编码， 但那不是加密）， 还是可以被别人看到的， 所以我不能在其中保存像密码这样的敏感信息。
@@ -138,7 +138,7 @@ session 也是类似的道理，服务器要知道当前发请求给自己的是
 
 实现思路：
 
-![Partition Image]({{site.url}}/assets/img/postimage/CookieAndSessionAndToken⁩/five.jpeg)
+![Partition Image]({{site.url}}/assets/img/postimage/Web/five.jpeg)
 {: .image-middle}
 
 * 用户登录校验，校验成功后就返回Token给客户端。
