@@ -29,6 +29,8 @@ comments: true
 ![Partition Image]({{site.url}}/assets/img/postimage/CookieAndSessionAndToken⁩/one.jpeg)
 {: .image-middle}
 
+![Partition Image]({{site.url}}/assets/img/postimage/GC/serial.jpeg)
+{: .image-middle}
 
 后来有个叫Memcached的支了招： 把session id 集中存储到一个地方， 所有的机器都来访问这个地方的数据， 这样一来，就不用复制了， 但是增加了单点失败的可能性， 要是那个负责session 的机器挂了， 所有人都得重新登录一遍， 估计得被人骂死。
 
