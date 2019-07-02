@@ -70,11 +70,13 @@ gems:
   - jekyll-gist
   - jekyll-paginate
 
+gem "jekyll", ">= 3.6.3"
+
 jekyll-mentions:
     base_url: https://github.com
 
 paginate: 8
-paginate_path: "/page/:num"
+paginate_path: "/page/:num/"
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
